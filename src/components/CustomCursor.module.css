@@ -1,0 +1,39 @@
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index: 9999;
+  }
+  
+  #cursor-outer,
+  #cursor-inner {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(252, 251, 251)!important;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  #cursor-outer{
+      background-color: aqua;
+      color: aliceblue;
+  }
+  
+  #cursor-outer {
+    background-color: rgb(139, 138, 138)!important;
+    transform: scale(1);
+  }
+  
+  #cursor-inner {
+      background-color: rgb(252, 251, 251)!important;
+    transform: scale(0.5);
+  }
+  
+  /* Add hover effect */
+  a:hover #cursor-outer {
+    transform: scale(1.5);
+    background-color: rgb(252, 251, 251)!important;
+  }
+  
