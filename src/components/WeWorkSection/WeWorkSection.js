@@ -1,7 +1,8 @@
 import { weWorkSection } from "@/data/weWorkSection";
 import React, { useState } from "react";
 import SingleWeWork from "./SingleWeWork";
-
+import Zoom from 'react-reveal/Zoom';
+import Bounce from 'react-reveal/Bounce';
 const { title, tabBtns, tabsContents } = weWorkSection;
 
 const WeWorkSection = () => {
@@ -11,10 +12,13 @@ const WeWorkSection = () => {
     <section className="we-work-section">
       <div className="auto-container">
         <div className="sec-title centered">
+        <Zoom top delay={400}>
           <h2>
             {title}
             <span className="dot">.</span>
           </h2>
+          </Zoom>
+
         </div>
         <div className="work-tabs tabs-box">
           <ul className="tab-btns tab-buttons clearfix">
@@ -24,7 +28,7 @@ const WeWorkSection = () => {
                 key={id}
                 className={`tab-btn${current === id ? " active-btn" : ""}`}
               >
-                <span>{title}</span>
+            <Bounce right delay={500}>    <span>{title}</span></Bounce> 
               </li>
             ))}
           </ul>

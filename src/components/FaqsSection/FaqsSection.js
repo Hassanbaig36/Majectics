@@ -1,13 +1,14 @@
 import { faqsSection } from "@/data/faqsSection";
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-
+import Pulse from 'react-reveal/Pulse';
 const Faqs = ({ allFaqs = {} }) => {
   const { faqs, defaultCurrent } = allFaqs;
   const [current, setCurrent] = useState(defaultCurrent);
 
   return (
     <Col lg={6} md={12} sm={12} className="faq-block">
+       <Pulse delay={200}>
       <ul className="accordion-box clearfix">
         {faqs.map(({ id, title, text }) => (
           <li
@@ -35,6 +36,7 @@ const Faqs = ({ allFaqs = {} }) => {
           </li>
         ))}
       </ul>
+      </Pulse>
     </Col>
   );
 };

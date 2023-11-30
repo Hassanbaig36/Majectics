@@ -31,7 +31,7 @@ render() {
 
           <meta
             name="description"
-            content="Linoor is a multipurpose and powerful Digital Services Agency NextJS Template. The template is highly suitable for companies that offer web design, web development, internet services, digital marketing, SEO services, and all other internet marketing and services related agencies and businesses."
+            content="Majectics is a multipurpose and powerful Digital Services Agency NextJS Template. The template is highly suitable for companies that offer web design, web development, internet services, digital marketing, SEO services, and all other internet marketing and services related agencies and businesses."
           />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 

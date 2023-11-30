@@ -1,7 +1,7 @@
 import { sponsorsSectionTwo } from "@/data/sponsorsSection";
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
-
+import RubberBand from 'react-reveal/RubberBand';
 const { title, images } = sponsorsSectionTwo;
 
 const SponsorsSectionTwo = () => {
@@ -10,12 +10,14 @@ const SponsorsSectionTwo = () => {
       <div className="auto-container">
         <Row className="clearfix">
           <Col xl={5} lg={12} md={12} className="title-col">
+          <RubberBand delay={500}>
             <div className="sec-title animated fadeInLeft">
               <h2>
                 {title}
                 <span className="dot">.</span>
               </h2>
             </div>
+            </RubberBand>
           </Col>
 
           <Col xl={7} lg={12} md={12} className="logo-col">

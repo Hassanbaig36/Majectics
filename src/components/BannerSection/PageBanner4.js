@@ -1,7 +1,7 @@
 import bg from "@/images/background/FAQ.jpg";
 import Link from "next/link";
 import React from "react";
-
+import Rotate from 'react-reveal/Rotate';
 const PageBanner4 = ({
   title = "",
   page = "",
@@ -17,9 +17,11 @@ const PageBanner4 = ({
    
       <div className="banner-inner">
         <div className="auto-container">
+        <Rotate top left>
           <div className="inner-container clearfix">
             <h1>{title}</h1>
             <div className="page-nav">
+
               <ul className="bread-crumb clearfix">
                 <li>
                   <Link href="/">Home</Link>
@@ -33,6 +35,7 @@ const PageBanner4 = ({
               </ul>
             </div>
           </div>
+          </Rotate>
         </div>
       </div>
     </section>

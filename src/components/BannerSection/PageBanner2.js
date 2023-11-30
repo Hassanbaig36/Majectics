@@ -1,6 +1,6 @@
 import bg from "@/images/background/image-price.jpg";
 
-
+import Bounce from 'react-reveal/Bounce';
 import Link from "next/link";
 import React from "react";
 
@@ -20,6 +20,7 @@ const PageBanner2 = ({
       <div className="shape-2"></div>
       <div className="banner-inner">
         <div className="auto-container">
+        <Bounce bottom delay={100}>
           <div className="inner-container clearfix">
             <h1>{title}</h1>
             <div className="page-nav">
@@ -36,6 +37,7 @@ const PageBanner2 = ({
               </ul>
             </div>
           </div>
+          </Bounce>
         </div>
       </div>
     </section>

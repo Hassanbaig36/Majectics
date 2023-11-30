@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
-
+import Bounce from 'react-reveal/Bounce';
 const ContentSide = ({ service = {} }) => {
   const {
     image,
@@ -20,8 +20,10 @@ const ContentSide = ({ service = {} }) => {
         <Image src={image.src} alt="" />
       </div>
       <div className="text-content">
+      <Bounce left duration={2000} delay={500}>
         <h3>{title}</h3>
         <p>{text1}</p>
+
         <div className="featured">
           <Row className="clearfix">
             <Col md={6} sm={12} className="image-col">
@@ -44,6 +46,7 @@ const ContentSide = ({ service = {} }) => {
         </div>
         <p>{text2}</p>
         <p className="last">{text3}</p>
+        </Bounce>
       </div>
     </div>
   );

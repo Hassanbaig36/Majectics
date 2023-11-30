@@ -19988,7 +19988,7 @@ color: #000;
 }
 
 .blog-seven__title a:hover {
-  color: inherit;
+  color: var(--bg-color-1);
 }
 
 .blog-seven__meta {
@@ -20039,7 +20039,22 @@ color: #000;
   position: absolute;
   left: 40px;
   bottom: 100%;
-  background-color: #fff;
+  background-color: var(--bg-color-1);
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--thm-text);
+  font-size: 12px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  z-index: 10;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.blog-seven__date:hover {
+  position: absolute;
+  left: 40px;
+  bottom: 100%;
+  background-color: #000;
   padding-left: 20px;
   padding-right: 20px;
   color: var(--thm-text);

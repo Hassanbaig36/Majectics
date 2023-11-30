@@ -3,6 +3,8 @@ import useActive from "@/hooks/useActive";
 import dynamic from "next/dynamic";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import Roll from 'react-reveal/Roll';
+import Fade from 'react-reveal/Fade';
 
 const MapBox = dynamic(() => import("../MapSection/MapBox"));
 const FormBox = dynamic(() => import("./FormBox"));
@@ -15,12 +17,13 @@ const ContactSection = ({ className = "", map = false, form = false }) => {
   return (
     <section ref={ref} className={`contact-section ${className}`} id="contact">
       <div className="auto-container">
+      <Roll top cascade>  
         <div className="sec-title centered">
-          <h2>
-            {title} <span className="dot">.</span>
+         <h2>
+             {title} <span className="dot">.</span>
           </h2>
         </div>
-
+        </Roll>
         <div className="upper-info">
           <Row className="clearfix">
             {contacts.map(({ id, name, address, email, phone }) => (
@@ -33,8 +36,9 @@ const ContactSection = ({ className = "", map = false, form = false }) => {
                 className="info-block animated fadeInUp"
               >
                 <div className="inner-box">
-                  <h5>{name}</h5>
+                <Roll top cascade delay={400}>          <h5>{name}</h5></Roll>
                   <div className="text">
+                  <Fade left delay={1000}>
                     <ul className="info">
                       <li>{address}</li>
                       <li>
@@ -44,6 +48,7 @@ const ContactSection = ({ className = "", map = false, form = false }) => {
                         <a href={`tel:${phone.split(" ").join("")}`}>{phone}</a>
                       </li>
                     </ul>
+                    </Fade>
                   </div>
                 </div>
               </Col>

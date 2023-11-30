@@ -2,7 +2,7 @@ import { getQuoteThree } from "@/data/getQuote";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-
+import RubberBand from 'react-reveal/RubberBand';
 const { title, inputs } = getQuoteThree;
 
 const GetQuoteThree = () => {
@@ -17,11 +17,14 @@ const GetQuoteThree = () => {
     <section className="get-quote-three">
       <div className="auto-container">
         <div className="sec-title centered">
+        <RubberBand delay={250}>
           <h2>
             {title}
             <span className="dot">.</span>
           </h2>
+          </RubberBand>
         </div>
+        <RubberBand delay={300}>
         <div className="form-box">
           <div className="default-form">
             <form onSubmit={handleSubmit(onSubmit)} id="contact-form">
@@ -67,6 +70,7 @@ const GetQuoteThree = () => {
             </form>
           </div>
         </div>
+        </RubberBand>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import LightSpeed from 'react-reveal/LightSpeed';
 const CallToSection = ({ className = "", container = true }) => {
   return (
     <section className={`call-to-section ${className}`}>
@@ -9,18 +9,24 @@ const CallToSection = ({ className = "", container = true }) => {
           <div className="shape-1 animated slideInRight"></div>
           <div className="shape-2 animated fadeInDown"></div>
           <div className={container ? "" : "auto-container clearfix"}>
+          <LightSpeed right delay={350}>
             <h2>
               Let&apos;s Get Your Project {container ? <br /> : ""}
               Started!
             </h2>
+            </LightSpeed>
+            <LightSpeed left delay={400}>
             <div className="link-box">
+           
               <Link href="/contact">
                 <a className="theme-btn btn-style-two">
                   <i className="btn-curve"></i>
                   <span className="btn-title">Contact with us</span>
                 </a>
               </Link>
+           
             </div>
+            </LightSpeed>
           </div>
         </div>
       </div>

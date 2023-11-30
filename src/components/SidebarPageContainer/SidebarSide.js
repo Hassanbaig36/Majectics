@@ -2,6 +2,7 @@ import { sidebar } from "@/data/sidebarPageContainer";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Roll from 'react-reveal/Roll';
 
 const { title, title2, text, phone, navItems } = sidebar;
 
@@ -11,6 +12,7 @@ const SidebarSide = () => {
   return (
     <aside className="sidebar blog-sidebar">
       <div className="sidebar-widget services">
+      <Roll left duration={1500} delay={400}>
         <div className="widget-inner">
           <div className="sidebar-title">
             <h4>{title}</h4>
@@ -23,9 +25,11 @@ const SidebarSide = () => {
             ))}
           </ul>
         </div>
+        </Roll>
       </div>
 
       <div className="sidebar-widget call-up">
+      <Roll left duration={1500} delay={500}>
         <div className="widget-inner">
           <div className="sidebar-title">
             <h4>{title2}</h4>
@@ -38,6 +42,7 @@ const SidebarSide = () => {
             </a>
           </div>
         </div>
+        </Roll>
       </div>
     </aside>
   );

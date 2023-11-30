@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
-
+import Bounce from 'react-reveal/Bounce';
 const SingleWeWork = ({ work = {}, current }) => {
   const { id, image, text1, text2, lists } = work;
 
@@ -24,13 +24,16 @@ const SingleWeWork = ({ work = {}, current }) => {
           <div className="inner">
             <div className="content">
               <div className="text">
-                <p>{text1}</p>
-                <p className="theme_color">{text2}</p>
+              <Bounce right delay={600}>        <p>{text1}</p></Bounce>
+              <Bounce right delay={700}>      <p className="theme_color">{text2}</p></Bounce>
+            
                 <ul>
-                  {lists.map((text, i) => (
+                <Bounce right delay={800}>     {lists.map((text, i) => (
                     <li key={i}>{text}</li>
                   ))}
+                   </Bounce>  
                 </ul>
+                  
               </div>
             </div>
           </div>

@@ -3,7 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import TextSplit from "../Reuseable/TextSplit";
-
+import Fade from 'react-reveal/Fade';
+import RubberBand from 'react-reveal/RubberBand';
 const { title, discovers } = discoverSection;
 
 const DiscoverSection = ({ ShowTitle = true }) => {
@@ -13,7 +14,7 @@ const DiscoverSection = ({ ShowTitle = true }) => {
         {ShowTitle && (
           <div className="sec-title centered">
             <h2>
-              <TextSplit text={title} />
+            <TextSplit text={title} />
               <span className="dot">.</span>
             </h2>
           </div>
@@ -30,14 +31,22 @@ const DiscoverSection = ({ ShowTitle = true }) => {
                 </div>
                 <div className="cap-box animated fadeInUp">
                   <div className="cap-inner">
-                    <h5>{title}</h5>
+                  <Fade top big cascade>          <h5>{title}</h5></Fade>
+                  <RubberBand delay={1000} duration={3000}>
+                   
                     <div className="more-link">
+                  
                       <Link href="/about">
+                        
                         <a>
+                       
                           <span className="fa fa-angle-right"></span>
+                         
                         </a>
                       </Link>
+                   
                     </div>
+                    </RubberBand>
                   </div>
                 </div>
               </div>

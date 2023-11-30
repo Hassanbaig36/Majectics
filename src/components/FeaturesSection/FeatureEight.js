@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-
+import Bounce from 'react-reveal/Bounce';
 const { image, title, text, barTitle, percent } = featureEight;
 
 const FeatureEight = () => {
@@ -26,12 +26,15 @@ const FeatureEight = () => {
           </Col>
           <Col md={12} lg={7}>
             <div className="feature-eight__content">
+            <Bounce left cascade delay={300}>
               <div className="sec-title">
                 <h2>
                   {title} <span className="dot">.</span>
                 </h2>
               </div>
-              <p className="feature-eight__text">{text}</p>
+             
+             <p className="feature-eight__text">{text}</p>
+             </Bounce>
               <div className="progress-box">
                 <div className="bar-title">{barTitle}</div>
                 <VisibilitySensor
@@ -58,6 +61,7 @@ const FeatureEight = () => {
                   </div>
                 </VisibilitySensor>
               </div>
+             
             </div>
           </Col>
         </Row>

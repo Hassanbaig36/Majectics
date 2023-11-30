@@ -1,6 +1,8 @@
 import bg from "@/images/background/Services.jpg";
 import Link from "next/link";
 import React from "react";
+import Roll from 'react-reveal/Roll';
+import Zoom from 'react-reveal/Zoom';
 
 const PageBanner5 = ({
   title = "",
@@ -17,9 +19,11 @@ const PageBanner5 = ({
    
       <div className="banner-inner">
         <div className="auto-container">
+        <Zoom bottom>
           <div className="inner-container clearfix">
             <h1>{title}</h1>
             <div className="page-nav">
+           
               <ul className="bread-crumb clearfix">
                 <li>
                   <Link href="/">Home</Link>
@@ -31,8 +35,10 @@ const PageBanner5 = ({
                 )}
                 <li className="active">{page || title}</li>
               </ul>
+          
             </div>
           </div>
+           </Zoom>
         </div>
       </div>
     </section>

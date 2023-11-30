@@ -112,11 +112,12 @@ function Home() {
                         <section >
 
                             <SliderSeven />
-                            <Box/>
+                         
 
 
                             <Text />
                             <MagnificPopup/>
+                               <Box/>
                         </section>
 
 

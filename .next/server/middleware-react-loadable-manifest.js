@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"..\\components\\ParallaxSection\\ParallaxSection.js -> ../Jarallax/Jarallax":{"id":"..\\components\\ParallaxSection\\ParallaxSection.js -> ../Jarallax/Jarallax","files":["static/chunks/src_components_Jarallax_Jarallax_js.js"]},"..\\components\\TestimonialsSection\\TestimonialsSection.js -> @/components/TinySlider/TinySlider":{"id":"..\\components\\TestimonialsSection\\TestimonialsSection.js -> @/components/TinySlider/TinySlider","files":["static/chunks/src_components_TinySlider_TinySlider_js.js"]}}
+self.__REACT_LOADABLE_MANIFEST={}

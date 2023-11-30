@@ -3,7 +3,7 @@ import useActive from "@/hooks/useActive";
 import dynamic from "next/dynamic";
 import React, { useRef } from "react";
 import SingleTestimonial from "./SingleTestimonial";
-
+import Zoom from 'react-reveal/Zoom';
 const TinySlider = dynamic(() => import("@/components/TinySlider/TinySlider"), {
   ssr: false,
 });
@@ -39,8 +39,10 @@ const TestimonialsSection = () => {
       <div className="auto-container">
         <div className="sec-title">
           <h2>
+          <Zoom left cascade delay={1000}>
             {title}
             <span className="dot">.</span>
+            </Zoom>
           </h2>
         </div>
         <div className="carousel-box">

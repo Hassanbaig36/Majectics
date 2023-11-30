@@ -1,6 +1,7 @@
 import agencySection from "@/data/agencySection";
 import React, { useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
+import Rotate from 'react-reveal/Rotate';
 import TextSplit from "../Reuseable/TextSplit";
 
 const { title, tabBtns, tabContents, text, image, textList } = agencySection;
@@ -14,11 +15,15 @@ const AgencySection = () => {
         <Row className="clearfix">
           <Col xl={6} lg={12} md={12} sm={12} className="left-col">
             <div className="inner">
+            <Rotate top left cascade delay={500} duration={1000}>
               <div className="sec-title">
+            
                 <h2>
                   <TextSplit text={title} /> <span className="dot">.</span>
                 </h2>
+              
               </div>
+              </Rotate >
               <div className="default-tabs tabs-box">
                 <ul className="tab-btns tab-buttons clearfix">
                   {tabBtns.map(({ id, text }) => (
@@ -53,18 +58,28 @@ const AgencySection = () => {
           </Col>
           <Col xl={6} lg={12} md={12} sm={12} className="right-col">
             <div className="inner">
-              <div className="text">{text}</div>
+            <div className="text">{text}</div>
               <div className="featured-block-two clearfix">
                 <div className="image">
-                  <Image src={image.src} alt="" />
+                <Rotate bottom right cascade>      <Image src={image.src} alt="" /> </Rotate>
                 </div>
+       
                 <div className="text">
-                  <ul>
+             
+            <Rotate bottom left cascade>
+     <ul>
                     {textList.map((text, i) => (
-                      <li key={i}>{text}</li>
+                
+                     <li key={i}>{text}</li>
+                     
+                     
+                     
+                     
                     ))}
                   </ul>
+                  </Rotate>
                 </div>
+              
               </div>
             </div>
           </Col>

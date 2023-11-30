@@ -3,6 +3,7 @@ import React from "react";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper } from "swiper/react";
 import SingleProject from "./SingleProject";
+import Flip from 'react-reveal/Flip';
 import Flash from 'react-reveal/Flash';
 SwiperCore.use([Autoplay]);
 
@@ -43,11 +44,13 @@ const ProjectSeven = () => {
           </Flash>
         </div>
         <Swiper {...options} className="thm-swiper__slider">
+        <Flip left duration={3000}>
           <div className="swiper-wrapper">
             {projectSeven.map((project) => (
               <SingleProject key={project.id} project={project} />
             ))}
           </div>
+          </Flip>
         </Swiper>
       </div>
     </section>

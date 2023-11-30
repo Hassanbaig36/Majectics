@@ -20,12 +20,14 @@ const FunFactSeven = () => {
           {funFactSeven.map(({ id, count, text }) => (
             <Col key={id} md={6} lg={3}>
               <div className="funfact-seven__item">
+              <Fade left big cascade duration={3000}>
                 <h3 className="funfact-seven__title count-box">
                   <span className="count-text">
                     <VisibilityCountUp count={count} />
                   </span>
                 </h3>
                 <p className="funfact-seven__text">{text}</p>
+                </Fade>
               </div>
             </Col>
           ))}

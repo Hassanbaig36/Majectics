@@ -1,7 +1,7 @@
 import bg from "@/images/background/How.jpg";
 import Link from "next/link";
 import React from "react";
-
+import Zoom from 'react-reveal/Zoom';
 const PageBanner3 = ({
   title = "",
   page = "",
@@ -17,6 +17,7 @@ const PageBanner3 = ({
    
       <div className="banner-inner">
         <div className="auto-container">
+        <Zoom top cascade>
           <div className="inner-container clearfix">
             <h1>{title}</h1>
             <div className="page-nav">
@@ -33,6 +34,7 @@ const PageBanner3 = ({
               </ul>
             </div>
           </div>
+          </Zoom>
         </div>
       </div>
     </section>

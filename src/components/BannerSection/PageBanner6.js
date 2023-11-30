@@ -1,7 +1,7 @@
 import bg from "@/images/background/image-Port.jpg";
 import Link from "next/link";
 import React from "react";
-
+import Bounce from 'react-reveal/Bounce';
 const PageBanner6 = ({
   title = "",
   page = "",
@@ -18,8 +18,10 @@ const PageBanner6 = ({
       <div className="banner-inner">
         <div className="auto-container">
           <div className="inner-container clearfix">
-            <h1>{title}</h1>
+          <Bounce top>
+            <h1>{title}</h1></Bounce>
             <div className="page-nav">
+            <Bounce top delay={200}>
               <ul className="bread-crumb clearfix">
                 <li>
                   <Link href="/">Home</Link>
@@ -31,8 +33,10 @@ const PageBanner6 = ({
                 )}
                 <li className="active">{page || title}</li>
               </ul>
+              </Bounce>
             </div>
           </div>
+       
         </div>
       </div>
     </section>

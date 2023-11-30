@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { Fragment } from "react";
 import { Image } from "react-bootstrap";
 import TextSplit from "../Reuseable/TextSplit";
-
+import Bounce from 'react-reveal/Bounce';
 const { categories, tags, comments, posts } = sidebar;
 
 const SidebarSide = () => {
@@ -35,8 +35,9 @@ const SidebarSide = () => {
 
       <div className="sidebar-widget recent-posts">
         <div className="widget-inner">
+        <Bounce right duration={1500} delay={400}>     <h4>Latest Posts</h4>
           <div className="sidebar-title">
-            <h4>Latest Posts</h4>
+          
           </div>
 
           {posts.map(({ id, title, image }) => (
@@ -50,12 +51,16 @@ const SidebarSide = () => {
               <h5 className="text">
                 <a href="#">{title}</a>
               </h5>
+              
             </div>
+           
           ))}
+           </Bounce>
         </div>
       </div>
 
       <div className="sidebar-widget archives">
+      <Bounce right duration={1700} delay={600}>  
         <div className="widget-inner">
           <div className="sidebar-title">
             <h4>Categories</h4>
@@ -68,9 +73,11 @@ const SidebarSide = () => {
             ))}
           </ul>
         </div>
+        </Bounce>
       </div>
 
       <div className="sidebar-widget popular-tags">
+      <Bounce right duration={1900} delay={800}>  
         <div className="widget-inner">
           <div className="sidebar-title">
             <h4>Tags</h4>
@@ -84,15 +91,18 @@ const SidebarSide = () => {
             ))}
           </div>
         </div>
+        </Bounce>
       </div>
 
       <div className="sidebar-widget recent-comments">
+     
         <div className="widget-inner">
           <div className="sidebar-title">
-            <h4>Comments</h4>
+          <Bounce right duration={1900} delay={800}>        <h4>Comments</h4></Bounce>
           </div>
           {comments.map(({ id, text }) => (
             <div key={id} className="comment">
+                <Bounce right duration={1900} delay={800}>  
               <div className="icon">
                 <span className="flaticon-speech-bubble-2"></span>
               </div>
@@ -101,9 +111,11 @@ const SidebarSide = () => {
                   <TextSplit text={text} />
                 </a>
               </h5>
+              </Bounce>
             </div>
           ))}
         </div>
+      
       </div>
     </aside>
   );
